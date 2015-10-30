@@ -14,7 +14,7 @@ Partypack is, again, just a scaffolding for your project. At its core it include
 
  - Development config file
  - Production config file
- - ES6 Compiler (in case you're feeling extra ES6-esque)
+ - Babel Compiler (in case you're feeling extra ES6-esque or using React)
  - Winning enthusiasm
 
 ## How do I work this crazy thing?
@@ -27,7 +27,8 @@ Simple! Just make sure of two things:
 
 ### commands
 
- - `npm run develop` starts your development server at `localhost:3000`
+ - `npm run develop` starts your development server at `localhost:3000` and runs a hot reload whenever you update files in your `src` directory
+
  - `npm run dev-build` outputs your bundled scripts into the `dist/` folder under `entry.js`
  - `npm run prod-build` outputs your bundled scripts into the `dist/` folder that are now minified and optimized for your application.
 
@@ -35,7 +36,7 @@ Simple! Just make sure of two things:
 
  `<script src="/static/bundle.js"></script>`
 
- **Note:** *the file path is `static/` instead of `dist/` because the `publicpath` property has been set in our Webpack `.config` files.
+ **Note:** *the file path is `static/` instead of `dist/` because the `publicpath` property has been set in our Webpack `.config` files.*
 
  LET'S PARTY. 
 

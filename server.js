@@ -5,15 +5,17 @@ var express  = require('express'),
 
 var webpack  = require('webpack'),
     config   = require('./webpack.dev.config.js'),
-    compiler = webpack(config);
+    compiler = webpack(config),
+    hot      = require('webpack-hot-middleware')(compiler),
+    middle   = require('webpack-dev-middleware')
 
 
-app.use(require('webpack-dev-middleware')(compiler, {
+app.use( middle(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
 
-app.use(require('webpack-hot-middleware')(compiler));
+app.use(hot);
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));

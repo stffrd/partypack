@@ -6,7 +6,8 @@ var config = {
   /* 
     DEVTOOL 
   */
-  devtool: 'eval',
+  devtool: 'source-map',
+  
   /* 
     ENTRY
       Each item is a file that Webpack will look at
@@ -15,7 +16,6 @@ var config = {
       each as a module in output
   */
   entry: [
-    'webpack-hot-middleware/client',
     './src/entry.js'
   ],
 
@@ -39,8 +39,12 @@ var config = {
       of Webpack. 
   */
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJSPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
   ]
 } 
 
