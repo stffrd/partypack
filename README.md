@@ -12,10 +12,10 @@ This is a very bare-bones solution for that problem.
 
 Partypack is, again, just a scaffolding for your project. At its core it includes a few minimal things:
 
- - Development config file
- - Production config file
+ - Development config file (for Webpack)
+ - Production config file (also for Webpack)
  - Babel Compiler (in case you're feeling extra ES6-esque or using React)
- - Winning enthusiasm
+ - Winning enthusiasm (You gotta bring that one, buddy)
 
 ## How do I work this crazy thing?
 
@@ -29,12 +29,12 @@ Simple! Just make sure of two things:
 
  - `npm run develop` starts your development server at `localhost:3000` and runs a hot reload whenever you update files in your `src` directory
 
- - `npm run dev-build` outputs your bundled scripts into the `dist/` folder under `entry.js`
+ - `npm run dev-build` outputs your bundled scripts into the `dist/` folder under `bundle.js`
  - `npm run prod-build` outputs your bundled scripts into the `dist/` folder that are now minified and optimized for your application.
 
  At the end of the day you'll reference your bundle in your HTML like so:
 
- `<script src="/static/bundle.js"></script>`
+ `<script src="static/bundle.js"></script>`
 
  **Note:** *the file path is `static/` instead of `dist/` because the `publicpath` property has been set in our Webpack `.config` files.*
 
