@@ -15,6 +15,7 @@ var config = {
       each as a module in output
   */
   entry: [
+    'webpack/hot/dev-server',
     'webpack-hot-middleware/client',
     './src/entry.js'
   ],
@@ -58,6 +59,7 @@ var config = {
       extensions: ['','.js']
   }
 } 
+
 
 // Export such that calling require(./webpack.config.js)
 // will basically return the config object. 
