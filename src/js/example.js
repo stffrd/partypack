@@ -15,9 +15,14 @@ function example() {
 	return "This is an example function that we can export";
 }
 
+function write(msg) {
+	console.log(msg);
+}
+
 // export our variables AND our function.
 export {
 	x,
 	y,
-	example
+	example,
+	write
 }

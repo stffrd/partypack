@@ -14,7 +14,7 @@
     "development"
   ],
   "author": "Bradley Stafford",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.0.12",
     "babel-core": "^5.8.29",
