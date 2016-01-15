@@ -3,23 +3,23 @@ var path = require('path');
 
 var config = {
 
-  /* 
-    DEVTOOL 
+  /*
+    DEVTOOL
   */
   devtool: 'source-map',
-  
-  /* 
+
+  /*
     ENTRY
       Each item is a file that Webpack will look at
       and evaluate, pulling in all necessary dependencies
-      you made with the require() statement and bundling 
+      you made with the require() statement and bundling
       each as a module in output
   */
   entry: [
     './src/entry.js'
   ],
 
-  /* 
+  /*
     OUTPUT
       PATH      : Output to ./dist
       FILENAME  : filename will be 'bundle.js'
@@ -27,16 +27,16 @@ var config = {
                   as path /static/
   */
   output: {
-    path: path.join(__dirname, 'dist'), 
+    path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
 
 
-  /* 
+  /*
     PLUGINS
       Plugins that are used to enhance the functionality
-      of Webpack. 
+      of Webpack.
   */
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -46,8 +46,8 @@ var config = {
       }
     })
   ]
-} 
+}
 
 // Export such that calling require(./webpack.config.js)
-// will basically return the config object. 
-module.exports = config; 
+// will return the config object.
+module.exports = config;

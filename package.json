@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "develop": "node server.js",
-    "dev-build": "webpack --config ./webpack.dev.config.js",
-    "prod-build": "webpack --config ./webpack.prod.config.js"
+    "build-dev": "webpack --config ./webpack.dev.config.js",
+    "build-prod": "webpack --config ./webpack.prod.config.js"
   },
   "keywords": [
     "boilerplate",
