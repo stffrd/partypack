@@ -16,7 +16,7 @@
 */
 
 // Example import
-import * as example from './js/example.js'
+import * as example from './js/example.js';
 
 // Assigning the imported module to the global namespace
 // (which is window in a browser context)

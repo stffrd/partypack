@@ -40,12 +40,24 @@ var config = {
   */
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJSPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false
       }
     })
-  ]
+  ],
+
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        include: path.join(__dirname, 'src'),
+        loader: 'babel'
+      }
+    ]
+  },
+
 }
 
 // Export such that calling require(./webpack.config.js)
