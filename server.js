@@ -1,17 +1,17 @@
-var path     = require('path');
+var path = require('path');
 
-var express  = require('express'),
-    app      = express();
+var express = require('express');
+var app = express();
 
-var webpack  = require('webpack'),
-    config   = require('./webpack.dev.config.js'),
-    compiler = webpack(config),
-    wpHot      = require('webpack-hot-middleware')(compiler),
-    wpMiddleware   = require('webpack-dev-middleware'),
-    port = 3000;
+var webpack = require('webpack');
+var config = require('./webpack.dev.config.js');
+var compiler = webpack(config);
 
+var wpHot = require('webpack-hot-middleware')(compiler);
+var wpMiddleware = require('webpack-dev-middleware');
+var port = 3000;
 
-app.use( wpMiddleware(compiler, {
+app.use(wpMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
