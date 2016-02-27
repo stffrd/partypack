@@ -36,6 +36,6 @@ Simple! Just make sure of two things:
 
  `<script src="static/bundle.js"></script>`
 
- **Note:** *the file path is `static/` instead of `build/` because the `publicpath` property has been set in our Webpack `.config` files.*
+ **Note:** *the file path is `static/` instead of `build/` because the `publicpath` property has been set in our Webpack `.config` files. This means that when you run the server, there is no file output in `dist`, but the output is used by the running server instance to hot reload*
 
  LET'S PARTY.
