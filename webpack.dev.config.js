@@ -13,6 +13,10 @@ var config = {
       and evaluate, pulling in all necessary dependencies
       you made with the require() statement and bundling
       each as a module in output
+      
+      note: the 'webpack-hot' stuff is there to enable
+      hot module reloading in the browser, usually you would
+      just have your 'entry' points
   */
   entry: [
     'webpack/hot/dev-server',
