@@ -29,8 +29,8 @@ Simple! Just make sure of two things:
 
  - `npm run develop` starts your development server at `localhost:3000` and runs a hot reload whenever you update files in your `src` directory
 
- - `npm run dev-build` outputs your bundled scripts into the `build/` folder under `bundle.js`
- - `npm run prod-build` outputs your bundled scripts into the `build/` folder that are now minified and optimized for your application.
+ - `npm run build-dev` outputs your bundled scripts into the `build/` folder under `bundle.js`
+ - `npm run build-prod` outputs your bundled scripts into the `build/` folder that are now minified and optimized for your application.
 
  At the end of the day you'll reference your bundle in your HTML like so:
 
