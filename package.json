@@ -23,7 +23,7 @@
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.6.0",
     "express": "^4.13.3",
-    "webpack": "^1.12.2",
+    "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.4.1"
   }
