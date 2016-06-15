@@ -17,7 +17,7 @@
   "author": "Bradley Stafford",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^6.0.12",
+    "babel": "^6.3.26",
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
     "eslint": "^2.11.1",
